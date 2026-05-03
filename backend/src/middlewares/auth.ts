@@ -7,6 +7,7 @@ const PUBLIC_PATHS = [
   '/api/auth/',
   '/api/callback/',
   '/api/packs',
+  '/uploads/',
 ]
 
 export async function authMiddleware(req: FastifyRequest, reply: FastifyReply) {

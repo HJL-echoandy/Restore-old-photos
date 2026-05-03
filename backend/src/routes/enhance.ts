@@ -9,11 +9,8 @@ import {
   getEnhancementById,
   listEnhancements,
 } from '../models/enhancement'
-import { uploadBuffer, downloadToBuffer, buildUrl } from '../services/oss'
+import { uploadBuffer, buildUrl } from '../services/storage'
 import { enhancePhoto, EnhanceType } from '../services/openai'
-import { redisIncr } from '../utils/redis'
-
-const DAILY_FREE_LIMIT = 3  // 免费用户每天额外保护限流（已扣积分为准）
 
 export async function enhanceRoutes(app: FastifyInstance) {
   // 上传原图 + 触发增强（同步，适合小文件）

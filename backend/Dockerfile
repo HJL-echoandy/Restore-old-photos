@@ -28,8 +28,10 @@ RUN npm ci --omit=dev --ignore-scripts && npm cache clean --force
 # 拷贝编译产物
 COPY --from=builder /app/dist ./dist
 
-# 非 root 运行
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+# 非 root 运行，提前建好 uploads 目录并赋权
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup && \
+    mkdir -p /app/uploads/originals /app/uploads/enhanced && \
+    chown -R appuser:appgroup /app/uploads
 USER appuser
 
 EXPOSE 3000

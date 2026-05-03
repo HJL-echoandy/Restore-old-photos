@@ -25,12 +25,11 @@ export const config = {
     password: process.env.REDIS_PASSWORD || undefined,
   },
 
-  oss: {
-    region: process.env.OSS_REGION || 'oss-cn-hangzhou',
-    accessKeyId: process.env.OSS_ACCESS_KEY_ID || '',
-    accessKeySecret: process.env.OSS_ACCESS_KEY_SECRET || '',
-    bucket: process.env.OSS_BUCKET || '',
-    domain: process.env.OSS_DOMAIN || '',
+  // 本地存储（暂不用 OSS）
+  storage: {
+    uploadDir: process.env.UPLOAD_DIR || 'uploads',
+    // 对外访问的 base URL，生产时改为服务器域名
+    baseUrl: process.env.SERVER_BASE_URL || 'http://localhost:3000',
   },
 
   openai: {
