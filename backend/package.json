@@ -1,0 +1,32 @@
+{
+  "name": "photo-restore-backend",
+  "version": "1.0.0",
+  "description": "老照片修复小程序后端服务",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:init": "ts-node src/utils/db-init.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/multipart": "^8.3.0",
+    "ali-oss": "^6.21.0",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "mysql2": "^3.11.0",
+    "openai": "^4.52.7",
+    "redis": "^4.7.0",
+    "uuid": "^10.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/ali-oss": "^6.16.11",
+    "@types/node": "^20.14.11",
+    "@types/uuid": "^10.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  }
+}

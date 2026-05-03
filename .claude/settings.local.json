@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm view *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(curl -v http://localhost:5173/)",
+      "Bash(curl -s \"http://localhost:5173/index.html\")",
+      "Bash(pkill -f \"uni\")",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -v http://localhost:5174/)",
+      "Bash(pkill -f \"node.*uni\")",
+      "Bash(curl -s http://localhost:5175/src/App.vue)",
+      "Bash(curl -s \"http://localhost:5175/src/pages/index/index.vue\")",
+      "Bash(start *)",
+      "Bash(curl -s \"http://localhost:5175/src/pages/recharge/index.vue\")",
+      "Bash(node *)",
+      "Bash(npx tsc *)",
+      "Bash(git add *)"
+    ]
+  }
+}

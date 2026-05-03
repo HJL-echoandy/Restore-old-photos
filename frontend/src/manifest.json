@@ -1,0 +1,29 @@
+{
+  "name": "老照片修复",
+  "appid": "__UNI__YOURAPPID",
+  "description": "一键修复老照片，超清画质重现",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "YOUR_WECHAT_APPID",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "minified": true
+    },
+    "usingComponents": true,
+    "permission": {
+      "scope.writePhotosAlbum": {
+        "desc": "保存修复后的照片到相册"
+      }
+    }
+  },
+  "mp-toutiao": {
+    "appid": "YOUR_DOUYIN_APPID",
+    "setting": {
+      "urlCheck": false
+    },
+    "usingComponents": true
+  }
+}
